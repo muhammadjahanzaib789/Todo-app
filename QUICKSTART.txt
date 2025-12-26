@@ -1,0 +1,80 @@
+QUICK START - Todo App Phase I
+===============================
+
+REQUIREMENTS:
+- Python 3.11 or higher
+
+HOW TO RUN:
+-----------
+
+Option 1 (Recommended):
+  python run.py
+
+Option 2:
+  python -m src.interface.main
+
+Option 3:
+  python -c "import sys; sys.path.insert(0, '.'); from src.interface.main import main; main()"
+
+
+FEATURES:
+---------
+1. Add Task        - Create new tasks with descriptions
+2. View Tasks      - See all tasks with IDs and completion status
+3. Update Task     - Modify task descriptions
+4. Delete Task     - Remove unwanted tasks
+5. Mark Complete   - Mark tasks as done
+6. Mark Incomplete - Unmark completed tasks
+7. Quit            - Exit (all data is lost)
+
+
+IMPORTANT NOTE:
+---------------
+This is an IN-MEMORY application. All tasks are LOST when you quit!
+No data is saved to disk. This is Phase I - persistence comes in Phase II.
+
+
+TESTING:
+--------
+Run the manual test script:
+  python test_manual.py
+
+
+EXAMPLE SESSION:
+----------------
+$ python run.py
+
+=== Todo List Application ===
+
+1. Add Task
+2. View Tasks
+3. Update Task
+4. Delete Task
+5. Mark Task Complete
+6. Mark Task Incomplete
+7. Quit
+
+Enter your choice (1-7): 1
+
+Enter task description: Buy groceries
+
+✓ Task added successfully with ID 1.
+
+[Press Enter to continue...]
+
+(Menu reappears - select option 2 to view tasks)
+
+=== Task List ===
+
+[1] Buy groceries - Incomplete
+
+[Press Enter to continue...]
+
+
+TROUBLESHOOTING:
+----------------
+If you get "ModuleNotFoundError", make sure you're running from the todo-app directory:
+  cd todo-app
+  python run.py
+
+For development setup, see: specs/001-phase-i-in-memory/quickstart.md
